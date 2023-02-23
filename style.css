@@ -1,0 +1,285 @@
+/* Global */
+*, *::before, *::after {
+    box-sizing: border-box; }
+  
+  body {
+    margin: 0;
+    text-align: center;
+    background: #fff;
+    color: #3d3d3d;
+    font-size: 16px;
+    line-height: 1.7;
+    font-family: "Oxygen", Sans-Serif; }
+  
+  .container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px; }
+  
+  section {
+    padding-top: 108px;
+    padding-bottom: 108px; }
+  
+  .section-title {
+    position: relative;
+    font-size: 36px;
+    margin: 0 0 60px 0;
+    font-family: "Noto-Serif", Serif; }
+  
+  .section-title::after {
+    position: absolute;
+    content: '';
+    bottom: -12px;
+    left: 50%;
+    width: 50px;
+    height: 10px;
+    transform: translateX(-50%);
+    background: #e74c3c; }
+  
+  /* Splash */
+  .splash {
+    height: 100vh;
+    position: relative;
+    background-image: url("https://images.pexels.com/photos/4974915/pexels-photo-4974915.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed; }
+  
+  .splash-inner {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+  
+  .splash i {
+    font-size: 30px;
+    background: #e74c3c;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    color: #fff;
+    border-radius: 50%;
+    text-shadow: 2px 4px 15px black; }
+  
+  .page-title {
+    color: #fff;
+    font-size: 60px;
+    margin: 48px 0 0 0;
+    position: relative;
+    text-shadow: 2px 4px 10px black;
+    font-family: "Noto-Serif", Serif; }
+  
+  .page-title::after {
+    position: absolute;
+    content: '';
+    bottom: -24px;
+    left: 50%;
+    width: 100px;
+    height: 10px;
+    transform: translateX(-50%);
+    background: #e74c3c; }
+  
+  .page-subtitle {
+    color: #fff;
+    font-size: 18px;
+    margin: 48px 0 0 0;
+    text-shadow: 2px 4px 10px black; }
+  
+  /* Intro */
+  .intro {
+    background: #fff; }
+  
+  .intro p {
+    width: 70%;
+    margin: 0 auto;
+    padding: 5% 0;
+    font-size: 24px;
+    border-top: 1px solid #636e72;
+    border-bottom: 1px solid #636e72; }
+  
+  /* About */
+  .about {
+    background: #f0f0f0; }
+  
+  /* Skills */
+  [class^="skill-"] {
+    position: relative; }
+  
+  .skill-image {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1; }
+  
+  .skill-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 1s; }
+  
+  .skill-right .skill-image {
+    right: 0; }
+  
+  .skill-left .skill-image {
+    left: 0; }
+  
+  .skill-right .skill-description {
+    padding: 36px 55% 36px 0;
+    text-align: right;
+    transition: all 1s; }
+  
+  .skill-left .skill-description {
+    padding: 36px 0 36px 55%;
+    text-align: left;
+    transition: all 1s; }
+  
+  h3 {
+    color: #eb4d4b; }
+  
+  .skill-image img:hover {
+    transform: scale(1.2); }
+  
+  /* Portfolio */
+  .portfolio {
+    position: relative; }
+  
+  .portfolio-inner {
+    position: relative;
+    float: left;
+    width: 33.3333%;
+    height: 300px;
+    overflow: hidden;
+    z-index: 1; }
+  
+  .portfolio-description {
+    position: absolute;
+    width: 100%;
+    top: 30%;
+    
+    display: none; }
+  
+  .row::before, .row::after {
+    clear: both;
+    content: "";
+    display: table; }
+  
+  .portfolio-inner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 1s; }
+  
+  .portfolio-description h3 {
+    color: black;
+    font-family: "Oxygen", Sans-Serif;
+    font-variant: small-caps; }
+  
+  .portfolio-description p {
+    background-color: #e74c3c;
+    color: #fff;
+    font-family: "Oxygen", Sans-Serif; }
+  
+  .portfolio-inner::before {
+    position: absolute;
+    content: '';
+    display: none;
+    width: 100%;
+    height: 100%;
+    background: white;
+    opacity: 0.7; }
+  
+  .portfolio-inner:hover::before {
+    display: block; }
+  
+  .portfolio-inner:hover .portfolio-description {
+    display: block; }
+  
+  /* Form */
+  form {
+    background: #171717;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-around;
+    min-width: 250px;
+    max-width: 400px;
+    padding: 30px;
+    text-align: center;
+    height: 300px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+    margin: 0 auto; }
+  
+  input[type="email"] {
+    margin: 5px 0;
+    padding: 5px;
+    color: white;
+    width: 100%;
+    border: 1px solid #ccc;
+    transition: .5s all;
+    background: inherit;
+    display: block; }
+  
+  input[type="message"] {
+    margin: 5px 0;
+    padding: 5px;
+    color: white;
+    width: 100%;
+    border: 1px solid #ccc;
+    transition: .5s all;
+    background: inherit; }
+  
+  input:required {
+    border-color: white;
+    outline-color: tomato; }
+  
+  input[type="submit"] {
+    height: 40px;
+    border: none;
+    background: #d63031;
+    font-size: 20px;
+    text-shadow: 1px 1px 30px #666;
+    margin: 5px 0;
+    padding: 5px;
+    color: white;
+    width: 50%;
+    border: 1px solid white;
+    transition: .5s all; }
+  
+  div > input:first-of-type {
+    max-width: 130px;
+    float: left;
+    margin-right: 30px;
+    margin: 5px 0;
+    padding: 5px;
+    color: white;
+    width: 100%;
+    border: 1px solid #ccc;
+    transition: .5s all;
+    background: inherit;
+    border-color: white;
+    outline-color: #55ee70; }
+  
+  div > input {
+    max-width: 130px;
+    float: left;
+    margin: 5px 0;
+    padding: 5px;
+    color: white;
+    width: 100%;
+    border: 1px solid #ccc;
+    transition: .5s all;
+    background: inherit;
+    border-color: white;
+    outline-color: #55ee70; }
+  
+  input:optional {
+    border-color: white;
+    outline-color: #55ee70; }
+  
+  /* Footer */
+  .page-footer {
+    background: grey;
+    color: #fff; }
+  
